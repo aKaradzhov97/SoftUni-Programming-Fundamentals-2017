@@ -1,2 +1,2 @@
-# SoftUni-Programming-Fundamentals-2017
-SoftUni complete homeworks list
+# SoftUni-Tech-Module-2017
+SoftUni Tech Module 2017 homeworks.
