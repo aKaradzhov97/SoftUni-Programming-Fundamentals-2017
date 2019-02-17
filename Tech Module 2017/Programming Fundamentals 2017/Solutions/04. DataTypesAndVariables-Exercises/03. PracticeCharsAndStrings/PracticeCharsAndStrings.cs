@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _03.PracticeCharsAndStrings
+class PracticeCharsAndStrings
 {
-    class PracticeCharsAndStrings
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        string first = "Software University";
+        char second = char.Parse("B");
+        char third = char.Parse("y");
+        char forth = char.Parse("e");
+        string fifth = "I love programming";
+
+        Console.WriteLine(first);
+        Console.WriteLine(second);
+        Console.WriteLine(third);
+        Console.WriteLine(forth);
+        Console.WriteLine(fifth);
     }
 }

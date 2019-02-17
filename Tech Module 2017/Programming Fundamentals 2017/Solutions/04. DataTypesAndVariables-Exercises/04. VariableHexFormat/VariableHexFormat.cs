@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _04.VariableHexFormat
+class VariableHexFormat
 {
-    class VariableHexFormat
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        string input = Console.ReadLine();
+        int decimalValue = Convert.ToInt32(input, 16);
+
+        Console.WriteLine(decimalValue);
     }
 }

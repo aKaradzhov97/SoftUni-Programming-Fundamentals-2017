@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _02.CircleArea_Precision12_
+class CircleArea
 {
-    class CircleArea
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        double radius = double.Parse(Console.ReadLine());
+
+        Console.WriteLine($"{radius * radius * Math.PI:F12}");
     }
 }

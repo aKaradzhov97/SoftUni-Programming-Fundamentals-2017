@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _09.CountTheIntegers
+public class CountTheIntegers
 {
-    class CountTheIntegers
+    public static void Main()
     {
-        static void Main(string[] args)
+        long counter = 0;
+
+        try
         {
+            while (true)
+            {
+                long integers = long.Parse(Console.ReadLine());
+                counter++;
+            }
+        }
+        catch (Exception)
+        {
+            Console.WriteLine(counter);
         }
     }
 }

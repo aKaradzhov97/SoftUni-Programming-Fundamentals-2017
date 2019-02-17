@@ -1,9 +1,15 @@
 ﻿using System;
 
-    class HelloName
+class HelloName
+{
+    public static void Main()
     {
-        static void Main()
-        {
-
-        }
+        string name = Console.ReadLine();
+        PrintName(name);
     }
+
+    static void PrintName(string name)
+    {
+        Console.WriteLine("Hello, " + name + "!");
+    }
+}

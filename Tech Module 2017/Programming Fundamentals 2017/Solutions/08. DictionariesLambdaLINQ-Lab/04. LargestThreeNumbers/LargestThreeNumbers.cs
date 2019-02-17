@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _04.LargestThreeNumbers
+class LargestThreeNumbers
 {
-    class LargestThreeNumbers
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        int[] nums = Console.ReadLine()
+            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToArray();
+        var printNumbers = nums.OrderByDescending(x => x).Take(3);
+        Console.WriteLine(string.Join(" ", printNumbers));
     }
 }

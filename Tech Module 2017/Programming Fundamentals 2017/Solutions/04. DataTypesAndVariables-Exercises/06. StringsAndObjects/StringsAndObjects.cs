@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _06.StringsAndObjects
+class StringsAndObjects
 {
-    class StringsAndObjects
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        string input = Console.ReadLine();
+        string input2 = Console.ReadLine();
+        object obj = input + " " + input2;
+        Console.WriteLine(obj);
     }
 }

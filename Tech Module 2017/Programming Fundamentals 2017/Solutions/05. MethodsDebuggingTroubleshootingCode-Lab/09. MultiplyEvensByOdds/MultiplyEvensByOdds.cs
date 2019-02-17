@@ -1,15 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _09.MultiplyEvensByOdds
+class MultiplyEvensByOdds
 {
-    class MultiplyEvensByOdds
+    public static void Main()
     {
-        static void Main(string[] args)
+        var n = int.Parse(Console.ReadLine());
+        n = Math.Abs(n);
+        int evenSum = 0;
+        int oddSum = 0;
+        while (n > 0)
         {
+            var x = n % 10;
+            n = n / 10;
+            if (x % 2 == 0)
+            {
+                evenSum += x;
+            }
+            else
+            {
+                oddSum += x;
+            }
         }
+
+        Console.WriteLine(oddSum * evenSum);
     }
 }

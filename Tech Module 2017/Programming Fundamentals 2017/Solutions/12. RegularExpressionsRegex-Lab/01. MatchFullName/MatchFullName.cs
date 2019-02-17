@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-namespace _01.MatchFullName
+class MatchFullName
 {
-    class MatchFullName
+    public static void Main()
     {
-        static void Main(string[] args)
+        string pattern = @"\b[A-Z][a-z]+[' '][A-Z][a-z]+\b";
+        string input = Console.ReadLine();
+
+        MatchCollection matchedNames = Regex.Matches(input, pattern);
+
+        foreach (Match m in matchedNames)
         {
+            Console.Write(m.Value + " ");
         }
+        Console.WriteLine();
     }
 }

@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _17.PrintPartOfASCIITable
+class PrintPartOfASCIITable
 {
-    class PrintPartOfASCIITable
+    static void Main()
     {
-        static void Main(string[] args)
+        int from = int.Parse(Console.ReadLine());
+        int to = int.Parse(Console.ReadLine());
+
+        for (char i = (char)from; i <= (char)to; i++)
         {
+
+            Console.Write(i + " ");
         }
     }
 }

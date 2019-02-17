@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _05.ShortWordsSorted
+class ShortWordsSorted
 {
-    class ShortWordsSorted
+    public static void Main()
     {
-        static void Main(string[] args)
+        string[] words = Console.ReadLine()
+            .Split(new char[] { ' ', '.', ',', ':', ';', '(', ')', '[', ']', '"', '\'', '\\', '/', '!', '?' }, StringSplitOptions.RemoveEmptyEntries)
+            .ToArray();
+        for (int i = 0; i < words.Length; i++)
         {
+            words[i] = words[i].ToLower();
         }
+        var printWords = words.Where(x => x.Length < 5).OrderBy(x => x).Distinct();
+
+        Console.WriteLine(string.Join(", ", printWords));
     }
 }

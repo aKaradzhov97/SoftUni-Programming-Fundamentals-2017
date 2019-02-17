@@ -1,15 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _05.WordInPlural
+public class WordInPlural
 {
-    class WordInPlural
+    public static void Main()
     {
-        static void Main(string[] args)
+        string inputWord = Console.ReadLine();
+
+        if (inputWord.EndsWith("y"))
         {
+            inputWord = inputWord.Remove(inputWord.Length - 1);
+            inputWord = inputWord.Insert(inputWord.Length, "ies");
         }
+        else if (inputWord.EndsWith("o") || inputWord.EndsWith("ch") || inputWord.EndsWith("s") || inputWord.EndsWith("sh") || inputWord.EndsWith("x") || inputWord.EndsWith("z"))
+        {
+            inputWord = inputWord.Insert(inputWord.Length, "es");
+        }
+        else
+        {
+            inputWord = inputWord.Insert(inputWord.Length, "s");
+        }
+        Console.WriteLine(inputWord);
     }
 }

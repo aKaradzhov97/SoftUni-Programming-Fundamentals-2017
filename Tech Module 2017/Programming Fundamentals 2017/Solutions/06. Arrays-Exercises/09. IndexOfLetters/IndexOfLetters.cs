@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _09.IndexOfLetters
+class IndexOfLetters
 {
-    class IndexOfLetters
+    public static void Main()
     {
-        static void Main(string[] args)
+        string word = Console.ReadLine();
+
+        foreach (char letter in word)
         {
+            Console.WriteLine($"{letter} -> {letter - 'a'}");
         }
     }
 }

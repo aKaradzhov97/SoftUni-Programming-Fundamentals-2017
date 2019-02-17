@@ -1,15 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _03.BackIn30Minutes
+class BackIn30Minutes
 {
-    class BackIn30Minutes
+    static void Main()
     {
-        static void Main(string[] args)
+        int hours = int.Parse(Console.ReadLine());
+        int minutes = int.Parse(Console.ReadLine()) + 30;
+
+        if (minutes >= 60)
         {
+            hours++;
+            minutes = minutes - 60;
+        }
+        if (hours >= 24)
+        {
+            hours = 0;
+        }
+        //Printing result...
+        if (minutes < 10)
+        {
+            Console.WriteLine(hours + ":0" + minutes);
+        }
+        else if (minutes > 10)
+        {
+            Console.WriteLine(hours + ":" + minutes);
         }
     }
 }

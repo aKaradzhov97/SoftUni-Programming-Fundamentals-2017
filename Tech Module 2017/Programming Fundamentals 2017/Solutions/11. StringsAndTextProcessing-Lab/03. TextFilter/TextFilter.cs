@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _03.TextFilter
+class TextFilter
 {
-    class TextFilter
+    static void Main()
     {
-        static void Main(string[] args)
+        List<string> badWords = Console.ReadLine()
+            .Split(',', ' ')
+            .Where(w => w.Length > 0)
+            .ToList();
+
+        string text = Console.ReadLine();
+
+        foreach (var badWord in badWords)
         {
+            string wordLength = new string('*', badWord.Length);
+            text = text.Replace(badWord, wordLength);
         }
+        Console.WriteLine(text);
     }
 }

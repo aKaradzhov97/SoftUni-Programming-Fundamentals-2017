@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _07.CountNumbers
+class CountNumbers
 {
-    class CountNumbers
+    public static void Main()
     {
-        static void Main(string[] args)
+        List<int> numbers = Console.ReadLine()
+                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToList();
+        numbers.Sort();
+
+        var numbersToPrint = numbers.GroupBy(i => i);
+
+        foreach (var num in numbersToPrint)
         {
+            Console.WriteLine("{0} -> {1}", num.Key, num.Count());
         }
     }
 }

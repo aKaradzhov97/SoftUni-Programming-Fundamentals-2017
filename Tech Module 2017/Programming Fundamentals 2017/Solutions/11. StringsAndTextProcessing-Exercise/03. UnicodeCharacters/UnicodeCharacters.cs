@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace _03.UnicodeCharacters
+class UnicodeCharacters
 {
-    class UnicodeCharacters
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        Console.WriteLine(GetUnicodeString(Console.ReadLine()));
     }
+
+    public static string GetUnicodeString(string s)
+    {
+        //String to UNICODE characters method
+        StringBuilder sb = new StringBuilder();
+        foreach (char c in s)
+        {
+            sb.Append("\\u");
+            sb.Append(String.Format("{0:x4}", (int)c));
+        }
+        return sb.ToString();
+    }
+
 }

@@ -1,15 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
-namespace _04.Palindromes
+class Palindromes
 {
-    class Palindromes
+    static void Main()
     {
-        static void Main(string[] args)
+        List<string> input = Console.ReadLine()
+            .Split(new char[] { ' ', ',', '.', '?', '!' }, StringSplitOptions.RemoveEmptyEntries)
+            .OrderBy(x => x)
+            .ToList();
+        List<string> output = new List<string>();
+        foreach (var word in input)
         {
+            if (IsPalindrome(word) && !output.Contains(word))
+            {
+                output.Add(word);
+            }
         }
+        Console.WriteLine(string.Join(", ", output));
+    }
+    private static bool IsPalindrome(string s)
+    {
+        string reversed = new String(s.Reverse().ToArray());
+        return s == reversed;
     }
 }

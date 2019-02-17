@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _07.DivisibleBy3
+class DivisibleByThree
 {
-    class DivisibleByThree
+    static void Main()
     {
-        static void Main(string[] args)
+        for (int i = 3; i <= 100; i += 3)
         {
+            Console.WriteLine(i);
         }
     }
 }

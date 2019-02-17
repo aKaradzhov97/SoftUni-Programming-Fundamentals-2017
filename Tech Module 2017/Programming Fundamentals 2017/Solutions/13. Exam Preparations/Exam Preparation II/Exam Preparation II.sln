@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Charity Marathon", "01. Charity Marathon\01. Charity Marathon.csproj", "{CBCDC7AC-6282-4BDB-B076-699DB7D6C9EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Ladybugs", "02. Ladybugs\02. Ladybugs.csproj", "{F2DAE812-E982-403F-B1F5-78479A962408}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Nether Realms", "03. Nether Realms\03. Nether Realms.csproj", "{B6780326-E55C-4639-926C-B7A0791A2FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Roli The Coder", "04. Roli The Coder\04. Roli The Coder.csproj", "{06C936C2-B28D-4579-A600-A2B3977174AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBCDC7AC-6282-4BDB-B076-699DB7D6C9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCDC7AC-6282-4BDB-B076-699DB7D6C9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCDC7AC-6282-4BDB-B076-699DB7D6C9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCDC7AC-6282-4BDB-B076-699DB7D6C9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DAE812-E982-403F-B1F5-78479A962408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DAE812-E982-403F-B1F5-78479A962408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DAE812-E982-403F-B1F5-78479A962408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DAE812-E982-403F-B1F5-78479A962408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6780326-E55C-4639-926C-B7A0791A2FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6780326-E55C-4639-926C-B7A0791A2FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6780326-E55C-4639-926C-B7A0791A2FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6780326-E55C-4639-926C-B7A0791A2FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C936C2-B28D-4579-A600-A2B3977174AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C936C2-B28D-4579-A600-A2B3977174AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C936C2-B28D-4579-A600-A2B3977174AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C936C2-B28D-4579-A600-A2B3977174AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

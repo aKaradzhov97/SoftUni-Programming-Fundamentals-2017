@@ -1,15 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-namespace _02.MatchPhoneNumber
+class MatchPhoneNumber
 {
-    class MatchPhoneNumber
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        string pattern = @"(\+359)(\-|\s)(2)\2[0-9]{3}\2[0-9]{4}";
+        string input = Console.ReadLine();
+
+        var phoneMathes = Regex.Matches(input, pattern);
+
+        var matchedPhones = phoneMathes
+            .Cast<Match>()
+            .Select(a => a.Value.Trim())
+            .ToArray();
+
+        Console.WriteLine(string.Join(", ", matchedPhones));
     }
 }

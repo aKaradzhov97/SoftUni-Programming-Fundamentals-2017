@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _11.OddNumber
+public class OddNumber
 {
-    class OddNumber
+    public static void Main()
     {
-        static void Main(string[] args)
+        int input = int.Parse(Console.ReadLine());
+        int n = Math.Abs(input);
+
+        while (n % 2 == 0)
         {
+            Console.WriteLine("Please write an odd number.");
+            input = int.Parse(Console.ReadLine());
+            n = Math.Abs(input);
         }
+        Console.WriteLine("The number is: " + n);
     }
 }

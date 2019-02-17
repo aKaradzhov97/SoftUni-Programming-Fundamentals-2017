@@ -1,9 +1,12 @@
 ﻿using System;
 
-    class MilesToKilometers
+class MilesToKilometers
+{
+    static void Main()
     {
-        static void Main()
-        {
+        double miles = double.Parse(Console.ReadLine());
+        double km = miles * 1.60934;
 
-        }
+        Console.WriteLine(km.ToString("F"));
     }
+}

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _14.IntegerToHexAndBinary
+class IntegerToHexAndBinary
 {
-    class IntegerToHexAndBinary
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        int n = int.Parse(Console.ReadLine());
+        string toHex = Convert.ToString(n, 16).ToUpper();
+        string toBinary = Convert.ToString(n, 2).ToUpper();
+        Console.WriteLine(toHex);
+        Console.WriteLine(toBinary);
     }
 }

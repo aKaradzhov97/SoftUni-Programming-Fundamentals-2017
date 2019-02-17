@@ -1,15 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _01.LargestCommonEnd
+class LargestCommonEnd
 {
-    class LargestCommonEnd
+    public static void Main()
     {
-        static void Main(string[] args)
+        string[] firstArr = Console.ReadLine()
+            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] secondArr = Console.ReadLine()
+            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+        // Array reversing
+        int leftCount = FindMaxCommonItems(firstArr, secondArr);
+        Array.Reverse(firstArr);
+        secondArr = secondArr.Reverse().ToArray();
+        int rightCount = FindMaxCommonItems(firstArr, secondArr);
+
+        Console.WriteLine($"{Math.Max(leftCount, rightCount)}");
+    }
+
+    public static int FindMaxCommonItems(string[] firstArr, string[] secondArr)
+    {
+        int lenght = Math.Min(firstArr.Length, secondArr.Length);
+        int counter = 0;
+
+        for (int i = 0; i < lenght; i++)
         {
+            if (firstArr[i] == secondArr[i])
+            {
+                counter++;
+            }
+            else
+            {
+                break;
+            }
         }
+
+        return counter;
     }
 }

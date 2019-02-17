@@ -1,15 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _01.RemoveNegativesAndReverse
+class RemoveNegativesAndReverse
 {
-    class RemoveNegativesAndReverse
+    public static void Main()
     {
-        static void Main(string[] args)
+        List<int> input = Console.ReadLine()
+            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        List<int> numbers = new List<int>();
+
+        foreach (int num in input)
         {
+            if (num >= 0)
+            {
+                numbers.Add(num);
+            }
+        }
+
+        if (numbers.Count() > 0)
+        {
+            numbers.Reverse();
+            Console.WriteLine(string.Join(" ", numbers));
+        }
+        else
+        {
+            Console.WriteLine("empty");
         }
     }
 }

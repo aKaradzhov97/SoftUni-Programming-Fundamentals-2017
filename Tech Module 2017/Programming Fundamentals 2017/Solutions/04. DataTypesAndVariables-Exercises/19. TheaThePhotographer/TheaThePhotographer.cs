@@ -1,15 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _19.TheaThePhotographer
+class TheaThePhotographer
 {
-    class TheaThePhotographer
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        decimal pictures = decimal.Parse(Console.ReadLine());
+        decimal filterTime = decimal.Parse(Console.ReadLine());
+        decimal percentGoodPics = decimal.Parse(Console.ReadLine());
+        decimal uploadTime = decimal.Parse(Console.ReadLine());
+
+        decimal filteredPics = Math.Ceiling(percentGoodPics / 100 * pictures);
+        decimal picturesFilterTime = pictures * filterTime;
+        decimal filteredPicsUploadTime = filteredPics * uploadTime;
+        double totalTimeInSeconds = (double)(filteredPicsUploadTime + picturesFilterTime);
+
+        Console.WriteLine(TimeSpan.FromSeconds(totalTimeInSeconds).ToString(@"d\:hh\:mm\:ss"));
     }
 }

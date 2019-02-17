@@ -1,15 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _05.CompareCharArrays
+class CompareCharArrays
 {
-    class CompareCharArrays
+    static void Main()
     {
-        static void Main(string[] args)
+        char[] firstArray = Console.ReadLine().Split(' ').Select(char.Parse).ToArray();
+        char[] secondArray = Console.ReadLine().Split(' ').Select(char.Parse).ToArray();
+
+        if (firstArray.Length == secondArray.Length)
         {
+            if (firstArray[0] > secondArray[0])
+            {
+                Console.WriteLine(secondArray);
+                Console.WriteLine(firstArray);
+            }
+            else
+            {
+                Console.WriteLine(firstArray);
+                Console.WriteLine(secondArray);
+            }
+        }
+        else if (firstArray.Length > secondArray.Length)
+        {
+            Console.WriteLine(secondArray);
+            Console.WriteLine(firstArray);
+        }
+        else
+        {
+            Console.WriteLine(firstArray);
+            Console.WriteLine(secondArray);
         }
     }
 }

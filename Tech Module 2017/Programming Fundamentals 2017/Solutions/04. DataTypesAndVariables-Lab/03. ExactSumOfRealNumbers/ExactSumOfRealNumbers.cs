@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _03.ExactSumOfRealNumbers
+class ExactSumOfRealNumbers
 {
-    class ExactSumOfRealNumbers
+    static void Main()
     {
-        static void Main(string[] args)
+        int totalNumbers = int.Parse(Console.ReadLine());
+        decimal a = 0m;
+        decimal sum = 0m;
+        for (int i = 1; i <= totalNumbers; i++)
         {
+            a = decimal.Parse(Console.ReadLine());
+            sum += a;
         }
+        Console.WriteLine(sum);
     }
 }

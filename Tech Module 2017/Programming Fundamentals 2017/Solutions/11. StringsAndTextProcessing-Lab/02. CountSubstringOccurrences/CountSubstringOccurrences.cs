@@ -1,15 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _02.CountSubstringOccurrences
+class CountSubstringOccurrences
 {
-    class CountSubstringOccurrences
+    static void Main()
     {
-        static void Main(string[] args)
+        string text = Console.ReadLine();
+        string pattern = Console.ReadLine();
+
+        Console.WriteLine(GetOccurencesCount(text, pattern));
+    }
+
+    public static int GetOccurencesCount(string input, string pattern)
+    {
+        input = input.ToLower();
+        pattern = pattern.ToLower();
+
+        int count = 0;
+        int index = -1;
+        while (true)
         {
+            index = input.IndexOf(pattern, index + 1);
+            if (index == -1)
+            {
+                break;
+            }
+            else
+            {
+                count++;
+            }
         }
+        return count;
     }
 }
